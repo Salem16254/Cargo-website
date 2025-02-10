@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Cargo Container Home</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ff9900;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #222;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+
+    /* Design Section */
+    .design-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .design-images img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border: 2px solid #ddd;
+      transition: transform 0.3s ease;
+    }
+    .design-images img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Timeline / Cycle Section */
+    .timeline {
+      position: relative;
+      margin: 50px 0;
+      padding: 20px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #ddd;
+    }
+    .timeline-item {
+      position: relative;
+      width: 45%;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .timeline-item.left {
+      float: left;
+      text-align: right;
+      clear: both;
+    }
+    .timeline-item.right {
+      float: right;
+      text-align: left;
+      clear: both;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 12px;
+      height: 12px;
+      background: #222;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-item.left::after {
+      right: -6px;
+    }
+    .timeline-item.right::after {
+      left: -6px;
+    }
+    /* Clearfix */
+    .timeline::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Contact Form */
+    form input, form textarea {
+      width: 80%;
+      max-width: 400px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      padding: 10px 20px;
+      background: #222;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background: #ff9900;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 20px;
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 40px;
+        text-align: left !important;
+      }
+      .timeline-item.left, .timeline-item.right {
+        float: none;
+      }
+      .timeline-item::after {
+        left: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Our Cargo Container Home</h1>
+    <nav>
+      <ul>
+        <li><a href="#design">Modeling Design</a></li>
+        <li><a href="#cycle">Cycle of Our Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Modeling Design Section -->
+  <section id="design">
+    <div class="container">
+      <h2>Modeling Design</h2>
+      <p>
+        Explore our innovative cargo container home designs. We merge modern architecture with sustainable solutions
+        to create unique living spaces.
+      </p>
+      <div class="design-images">
+        <!-- Replace these placeholders with your actual design images -->
+        <img src="https://via.placeholder.com/300x200?text=Design+1" alt="Design 1" />
+        <img src="https://via.placeholder.com/300x200?text=Design+2" alt="Design 2" />
+        <img src="https://via.placeholder.com/300x200?text=Design+3" alt="Design 3" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Cycle of Our Work Section -->
+  <section id="cycle">
+    <div class="container">
+      <h2>Cycle of Our Work</h2>
+      <p>
+        Our process is meticulously planned from concept to completion. Discover each stage of our workflow below.
+      </p>
+      <div class="timeline">
+        <div class="timeline-item left">
+          <h3>Step 1: Concept & Planning</h3>
+          <p>
+            We start by understanding your needs and conceptualizing innovative solutions tailored to your lifestyle.
+          </p>
+        </div>
+        <div class="timeline-item right">
+          <h3>Step 2: Detailed Design</h3>
+          <p>
+            Our team develops comprehensive blueprints and 3D models to visualize the final structure and layout.
+          </p>
+        </div>
+        <div class="timeline-item left">
+          <h3>Step 3: Construction</h3>
+          <p>
+            With state-of-the-art techniques and quality materials, we bring the design to life, ensuring durability and style.
+          </p>
+        </div>
+        <div class="timeline-item right">
+          <h3>Step 4: Finishing Touches</h3>
+          <p>
+            Final inspections, interior design, and customizations guarantee a home that is both functional and beautiful.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have questions or want to discuss your project? Get in touch with us below.</p>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <br />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <br />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <br />
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Our Cargo Container Home. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
